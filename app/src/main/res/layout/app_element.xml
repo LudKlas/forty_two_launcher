@@ -1,39 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_margin="14dp"
+        android:src="@drawable/ic_launcher_background" />
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width="38dp"
-            android:layout_height="38dp"
-            android:layout_margin="14dp"
-            android:src="@drawable/ic_launcher_background"/>
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="36dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:shadowColor="@color/black"
+            android:text="@string/dummy_text"
+            android:textColor="@color/white"
+            android:textSize="9pt" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:text="@string/dummy_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="9pt"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:layout_marginEnd="36dp"
-                android:layout_marginStart="10dp"
-                android:textColor="@color/white"
-                android:shadowColor="@color/black"
-                android:layout_centerVertical="true" />
-
-        </RelativeLayout>
-
-    </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>
