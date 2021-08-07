@@ -30,6 +30,8 @@ class MainActivity : AppCompatActivity() {
             val app = App(name, bundleid,icon)
             apps.add(app)
         }
+
+
         return apps
     }
 
