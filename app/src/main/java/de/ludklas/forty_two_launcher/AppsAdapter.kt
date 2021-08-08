@@ -15,12 +15,12 @@ class AppsAdapter(private val dataset: Array<App>) :
         val imageView: ImageView = view.findViewById(R.id.app_icon)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AppsAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.app_element, parent, false)
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: AppsAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.textView.text = dataset[position].name
         holder.imageView.setImageDrawable(dataset[position].icon)
         holder.view.setOnClickListener { view: View ->
