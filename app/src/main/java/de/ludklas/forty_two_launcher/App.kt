@@ -22,9 +22,6 @@ fun getApps(context: Context): Array<App> {
     return apps.sortedWith(compareBy { it.name }).toTypedArray()
 }
 
-fun launchApp(context: Context, bundleid: String) {
-    val launchIntent = context.packageManager.getLaunchIntentForPackage(bundleid)
-    if (launchIntent != null) {
-        context.startActivity(launchIntent)
-    }
+fun launchIntent(context: Context, launchIntent: Intent?) {
+    if (launchIntent != null) context.startActivity(launchIntent)
 }
